@@ -1,16 +1,27 @@
 import { Link, NavLink } from "react-router-dom";
 import { ToastContainer, toast, Zoom } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import useCurrentUser from "../../Hooks/useCurrentUser/useCurrentUser";
+import useAuthContext from "../../Hooks/useAuthContext/useAuthContext";
 
 // website logo
 const websiteLogo = "";
 
 const Navbar = () => {
-  const currentUser = true;
-  const dbCurrentUser = true;
+  // hooks and custom hooks
+  const { currentUser, signOutUser } = useAuthContext();
+  const { dbCurrentUser } = useCurrentUser();
 
   // handle logout
-  const handleLogOut = () => {};
+  const handleLogOut = () => {
+    signOutUser()
+      .then(() => {
+        successNotify();
+      })
+      .catch(() => {
+        failedNotify();
+      });
+  };
 
   // navigation bar links
   const links = (

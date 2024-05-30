@@ -19,7 +19,7 @@ const Newsletter = () => {
         data-aos-once="false"
         data-aos-anchor-placement="top-bottom"
       >
-        Join Motor Mingle
+        Join Car Point
       </h2>
       <p className="text-center text-lightBlack">
         Get latest updates to get your dream car.
