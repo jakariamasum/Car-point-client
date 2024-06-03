@@ -45,6 +45,14 @@ const Navbar = () => {
       >
         All listings
       </NavLink>
+      <NavLink
+        to="/all-blogs"
+        className={({ isActive }) => {
+          return isActive ? "active-nav-menu" : "single-nav-menu";
+        }}
+      >
+        All Blogs
+      </NavLink>
     </>
   );
 
@@ -152,11 +160,9 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/">
-            <img
-              src={websiteLogo}
-              alt="Website Logo"
-              className="w-3/4 hover:scale-110  duration-500"
-            />
+            <h2 className="font-bold hover:scale-110  duration-500">
+              Car point
+            </h2>
           </Link>
         </div>
 

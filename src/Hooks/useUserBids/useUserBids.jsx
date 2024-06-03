@@ -1,13 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../useAxiosSecure/useAxiosSecure";
 
-const useBids = (productId) => {
+const useUserBids = (email) => {
   const axiosSecure = useAxiosSecure();
 
-  const { isPending: bidsPending, data: allBids } = useQuery({
-    queryKey: ["all-bids", productId],
+  const { isLoading: bidsPending, data: allBids } = useQuery({
+    queryKey: ["all-bids", email],
     queryFn: async () => {
-      const res = await axiosSecure.get(`/allBids`);
+      const res = await axiosSecure.get(`/savedAdsList/${email}`);
       return res.data;
     },
   });
@@ -15,4 +15,4 @@ const useBids = (productId) => {
   return { bidsPending, allBids };
 };
 
-export default useBids;
+export default useUserBids;

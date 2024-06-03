@@ -12,6 +12,7 @@
   "dependencies": {
     "@smastrom/react-rating": "^1.5.0",
     "@tanstack/react-query": "^5.40.0",
+    "@tanstack/react-table": "^8.17.3",
     "aos": "^2.3.4",
     "axios": "^1.7.2",
     "firebase": "^10.12.2",
@@ -19,6 +20,7 @@
     "lottie-react": "^2.4.0",
     "match-sorter": "^6.3.4",
     "react": "^18.2.0",
+    "react-apexcharts": "^1.4.1",
     "react-dom": "^18.2.0",
     "react-icons": "^5.2.1",
     "react-rating": "^2.0.5",
