@@ -13,8 +13,6 @@ import useIsAdmin from "../../Hooks/useIsAdmin/useIsAdmin";
 import { useEffect } from "react";
 import useCurrentUser from "../../Hooks/useCurrentUser/useCurrentUser";
 import LoadingAnimation from "../../components/LoadingAnimation/LoadingAnimation";
-// website logo
-const invertedLogo = "";
 
 const Dashboard = () => {
   // hooks and custom hooks
@@ -166,7 +164,7 @@ const Dashboard = () => {
           return isActive ? "active-link-style" : "link-style";
         }}
       >
-        My Blogs
+        All Blogs
       </NavLink>
     </>
   );
@@ -199,15 +197,6 @@ const Dashboard = () => {
           ></label>
           {/* left side */}
           <div className="menu p-4 w-[250px] h-full lg:min-h-full bg-main text-white font-medium flex flex-grow flex-col justify-start items-start gap-5">
-            {/* website logo */}
-            <Link to="/" className="w-full flex justify-center items-center">
-              <img
-                src={invertedLogo}
-                alt="Car point logo"
-                className="w-3/4 hover:scale-110 duration-300"
-              />
-            </Link>
-
             {/* Sidebar links here */}
             <div className="w-full  flex flex-grow  flex-col content-between justify-between">
               {/* admin - user links */}

@@ -20,7 +20,6 @@ import AllUsers from "../Dashboards/AdminDashboard/AllUsers/AllUsers";
 import AdminAllProducts from "../Dashboards/AdminDashboard/AdminAllProducts/AdminAllProducts";
 import AllBids from "../Dashboards/AdminDashboard/AllBids/AllBids";
 import MyBiding from "../Dashboards/UserDashboard/MyBiding";
-import Blogs from "../Pages/MyBlogs/MyBlogs";
 import AllBlogs from "../Pages/AllBlogs/AllBlogs";
 import Contact from "../Pages/Contact/Contact";
 
@@ -117,7 +116,7 @@ const router = createBrowserRouter([
       },
       {
         path: "my-blogs",
-        element: <Blogs />,
+        element: <AllBlogs />,
       },
       {
         path: "sellCar",
