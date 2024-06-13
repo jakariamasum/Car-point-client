@@ -221,7 +221,8 @@ const ListingDetails = () => {
   };
 
   // Success message for successful login
-  const successNotify = (message) =>
+  const successNotify = (message) => {
+    console.log(message);
     toast.success(`${message}`, {
       position: "top-center",
       autoClose: 1500,
@@ -233,6 +234,7 @@ const ListingDetails = () => {
       theme: "colored",
       transition: Zoom,
     });
+  };
 
   // Failed notification for failed login (email-password)
   const failedNotify = (errorMessage) =>
@@ -535,11 +537,10 @@ const ListingDetails = () => {
                 className="bg-black text-white font-medium hover:bg-sub duration-500 px-4 py-2 mt-3 rounded-lg cursor-pointer"
               />
             </form>
-
-            <ToastContainer closeButton={false} />
           </div>
         </div>
       </dialog>
+      <ToastContainer closeButton={false} />
     </div>
   );
 };

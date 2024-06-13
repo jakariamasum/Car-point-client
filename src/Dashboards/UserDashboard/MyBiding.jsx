@@ -10,6 +10,7 @@ import LoadingAnimation from "../../components/LoadingAnimation/LoadingAnimation
 import useAxiosSecure from "../../Hooks/useAxiosSecure/useAxiosSecure";
 import useUserBids from "../../Hooks/useUserBids/useUserBids";
 import useCurrentUser from "../../Hooks/useCurrentUser/useCurrentUser";
+import { toast } from "react-toastify";
 
 const MyBiding = () => {
   // hooks and custom hooks
@@ -85,7 +86,9 @@ const MyBiding = () => {
     try {
       const response = await axiosSecure.put(`/confirmOrder/${_id}`);
       if (response.data.modifiedCount) {
-        // reload orders or update the state
+        toast.success("Success Notification !", {
+          position: "top-center",
+        });
       }
     } catch (error) {
       console.error("Failed to confirm order", error);
@@ -97,7 +100,9 @@ const MyBiding = () => {
     try {
       const response = await axiosSecure.put(`/cancelOrder/${_id}`);
       if (response.data.modifiedCount) {
-        // reload orders or update the state
+        toast.warn("Cancel Notification !", {
+          position: "top-center",
+        });
       }
     } catch (error) {
       console.error("Failed to cancel order", error);

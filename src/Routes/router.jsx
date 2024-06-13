@@ -22,6 +22,7 @@ import AllBids from "../Dashboards/AdminDashboard/AllBids/AllBids";
 import MyBiding from "../Dashboards/UserDashboard/MyBiding";
 import Blogs from "../Pages/MyBlogs/MyBlogs";
 import AllBlogs from "../Pages/AllBlogs/AllBlogs";
+import Contact from "../Pages/Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/all-blogs",
         element: <AllBlogs />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
       {
         path: "/details/:id",

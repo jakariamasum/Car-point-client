@@ -29,8 +29,12 @@ const AllBids = () => {
       ),
     },
     {
-      accessorKey: "productName",
-      header: "Product Name",
+      accessorKey: "productPrice",
+      header: "Original Price",
+    },
+    {
+      accessorKey: "proposedPrice",
+      header: "Propose Price",
     },
     {
       accessorKey: "bidderMessage",
@@ -171,6 +175,10 @@ const AllBids = () => {
           >
             Previous
           </button>
+          <span>
+            Page {table.getState().pagination.pageIndex + 1} of{" "}
+            {table.getPageCount()}
+          </span>
           <button
             disabled={!table.getCanNextPage()}
             onClick={() => table.nextPage()}

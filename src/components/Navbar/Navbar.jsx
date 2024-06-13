@@ -5,7 +5,6 @@ import useCurrentUser from "../../Hooks/useCurrentUser/useCurrentUser";
 import useAuthContext from "../../Hooks/useAuthContext/useAuthContext";
 
 // website logo
-const websiteLogo = "";
 
 const Navbar = () => {
   // hooks and custom hooks
@@ -52,6 +51,14 @@ const Navbar = () => {
         }}
       >
         All Blogs
+      </NavLink>
+      <NavLink
+        to="/contact"
+        className={({ isActive }) => {
+          return isActive ? "active-nav-menu" : "single-nav-menu";
+        }}
+      >
+        Contact Us
       </NavLink>
     </>
   );

@@ -17,7 +17,7 @@ const BlogCard = ({ img, title, desc, date }) => {
           {title}
         </h2>
         <p className="w-full md:w-[350px]">{desc}</p>
-        <Link to={`/blog-details/${title}`}>
+        <Link to="#">
           <p className="cursor-pointer flex gap-2 items-center font-bold hover:text-[#FF7425] pb-8">
             Read More <FaArrowRight />{" "}
           </p>
